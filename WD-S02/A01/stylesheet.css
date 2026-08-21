@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-position: inside;
+    padding-right: 5px;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(193, 193, 193);
+    width: 100%;
+    min-height: 100vh;
+}
+
+main{
+    margin: auto;
+    border: solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+}
+
+.content{
+    margin: 10px;
+    /* border: solid; */
+}
