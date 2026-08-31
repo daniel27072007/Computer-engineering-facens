@@ -17,17 +17,17 @@ int main(){
 }
 
 void calcularEstatisticas(int *v, int n, int *maior, int *menor, float *media){
-	*maior = v[0];
-	*menor = v[0];
-	int media_final = v[0];
+	*maior = *v;
+	*menor = *v;
+	int media_final = *v;
 	for(int i = 1; i < n; i++){
-		if(*maior < v[i]){
-			*maior = v[i];
+		if(*maior < *(v+i)){
+			*maior = *(v+i);
 		}
-		if(*menor > v[i]){
-			*menor = v[i];
+		if(*menor > *(v+i)){
+			*menor = *(v+i);
 		}
-		media_final += v[i];
+		media_final += *(v+i);
 	}
-	*media = media_final / n;
+	*media = (float) media_final / n;
 }
