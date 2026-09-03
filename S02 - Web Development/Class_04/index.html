@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border: solid
+        }
+        th{
+            border: solid
+        }
+        td{
+            border: solid
+        }
+        .ultimoObjeto{
+            background-color: blue;
+        }
+    </style>
+    <title>Medias_HTML</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Aula 04 - Midias em HTML</th>
+        </tr>
+        <tr>
+            <td>
+               <div id="objetivo1">
+                    <img src="img1.jfif" alt="imagem1" width="100px" height="100px">
+                    <img src="img2.jfif" alt="imagem2" width="100px" height="100px">
+                    <img src="img3.jfif" alt="imagem3" width="100px" height="100px">
+                </div> 
+            </td>
+            <td>
+                <div id="objetivo2">
+                    <video src="videoplayback.mp4" poster="thumbVideo.png" controls width="350px"></video>
+                </div>
+            </td>
+            <td>   
+                <div id="objetivo3">
+                    <audio controls src="mp3.mp3">O seu navegador nao suporta audios</audio>
+                    <audio controls src="Balatro - Short Trailer.ogg">O seu navegador nao suporta audios</audio>
+                </div>
+            </td>
+            <td>    
+                <div id="objetivo4">
+                    <form action="#">
+                        <label for="nome">Nome:</label>
+                        <input type="text" name="nome" id="nome">
+                        <label for="email">Email:</label>
+                        <input type="text"name="email" id="email">
+                        <label for="message">Mensagem</label>
+                        <textarea name="message" id="message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="objetivo5">
+                    <a href="https://www.google.com/?hl=pt_br">Google</a>
+                    <a href="https://www.google.com/?hl=pt_br" target="_blank">Google nova aba</a>
+                    <a href="https://www.google.com/?hl=pt_br"><img src="img1.jfif" width="100px" height="100px"></a>
+                </div>
+            </td>
+            <td>
+                <div id="objetivo6">
+                    <ol>
+                        <li>Passo 1</li>
+                        <li>Passo 2</li>
+                        <li>Passo 3</li>
+                    </ol>
+                    <ul>
+                        <li>Item A</li>
+                        <li>Item B</li>
+                        <li>Item C</li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div id="objetivo7">
+                    <table>
+                        <tr>
+                            <th>Head 1</th>
+                            <th>Head 2</th>
+                        </tr>
+                        <tr>
+                            <td>Value 1 A</td>
+                            <td>Value 2 A</td>
+                        </tr>
+                        <tr>
+                            <td>Value 1 B</td>
+                            <td>Value 2 B</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+            <td>
+                <div id="objetivo8">
+                    <div class="ultimoObjeto">
+                        <h3>Belo Poema</h3>
+                        <p>Lorem ispun yara yara ya</p>
+                        <p>Isso é um outro paragrafo de um poema</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>&copy; Exemplo didatico de HTML</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
