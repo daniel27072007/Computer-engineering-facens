@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            max-height: 100vh;
+        }
+        table{
+            width: 75%;
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 200px;
+            
+        }
+        #tableObjetivo{
+            margin-top: auto;
+        }
+        th, td{
+            vertical-align: top;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid black;
+            width: 25%;
+        }
+        .header-footer {
+            background-color: #e0e0e0;
+            text-align: center;
+            font-weight: bold;
+        }
+        .destaque {
+            background-color: #ffae6f;
+        }
+        .divconteiner{
+            font-style: oblique;
+            color: blue;
+        }
+    </style>
+    <title>Medias_HTML</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th class="header-footer" colspan="4" text-align="center">Aula 04 - Midias em HTML</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                <div id="objetivo1">
+                        <img src="img1.jfif" alt="imagem1" width="100px" height="100px">
+                        <img src="img2.jfif" alt="imagem2" width="100px" height="100px"><br>
+                        <img src="img3.jfif" alt="imagem3" width="100px" height="100px">
+                    </div> 
+                </td>
+                <td>
+                    <div id="objetivo2">
+                        <video src="videoplayback.mp4" poster="thumbVideo.png" controls width="350px"></video>
+                    </div>
+                </td>
+                <td>   
+                    <div id="objetivo3">
+                        <audio controls src="mp3.mp3">O seu navegador nao suporta audios</audio>
+                        <audio controls src="Balatro - Short Trailer.ogg">O seu navegador nao suporta audios</audio>
+                    </div>
+                </td>
+                <td>    
+                    <div id="objetivo4">
+                        <form action="#">
+                            <label for="nome">Nome:</label>
+                            <input type="text" name="nome" id="nome"><br>
+                            <label for="email">Email:</label>
+                            <input type="text"name="email" id="email"><br>
+                            <label for="message">Mensagem</label>
+                            <textarea name="message" id="message"></textarea><br>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="objetivo5">
+                        <a href="https://www.google.com/?hl=pt_br">Google</a><br>
+                        <a href="https://www.google.com/?hl=pt_br" target="_blank">Google nova aba</a><br>
+                        <a href="https://www.google.com/?hl=pt_br"><img src="img1.jfif" width="100px" height="100px"></a>
+                    </div>
+                </td>
+                <td>
+                    <div id="objetivo6">
+                        <ol>
+                            <li>Passo 1</li>
+                            <li>Passo 2</li>
+                            <li>Passo 3</li>
+                        </ol>
+                        <ul>
+                            <li>Item A</li>
+                            <li>Item B</li>
+                            <li>Item C</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div id="objetivo7">
+                        <table id="tableObjetivo">
+                            <tr>
+                                <th>Head 1</th>
+                                <th>Head 2</th>
+                                <th>Head 3</th>
+                            </tr>
+                            <tr>
+                                <td>Value 1 A</td>
+                                <td>Value 2 A</td>
+                                <td>Value 3 A</td>
+                            </tr>
+                            <tr>
+                                <td>Value 1 B</td>
+                                <td>Value 2 B</td>
+                                <td>Value 3 B</td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <div id="objetivo8">
+                        <p id="introducao">Paragrafo com <strong>id</strong></p>
+                        <p class="destaque"> Primeiro paragrafo com a <strong>class destaque</strong></p>
+                        <p class="destaque"> Segundo paragrafo com a <strong>class destaque</strong></p>
+                    </div>
+                    <div class="divconteiner">
+                        <h3>Subtitulo h3</h3>
+                        <p>A tag div nao tem efeito visual, apenas facilita a organizacao e agrupa elementos.</p>
+                        <p>Ao aplicar uma class nesse div, usando o CSS e possivel estilizar essa caixa inteira</p>
+                    
+                    </div>
+                </td>
+            </tr>    
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="header-footer" colspan="4" text-align="center">
+                    <p >&copy; Exemplo didatico de HTML</p>
+                </td>
+            </tr>    
+        </tfoot>  
+    </table>
+</body>
+</html>
