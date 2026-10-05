@@ -64,27 +64,59 @@ void insere_aluno(Aluno **v, int *n) {
 EXERC CIO 5 Impress o de alunos ativos? ? ?
 ============================================================ */
 void imprime_alunos(Aluno *v, int n) {
-/* TODO: imprimir apenas alunos ativos */
+	int countInativo = 0;
+	printf("\nLista de aluno ativos...\n");
+	for(int i = 0; i < n; i++){
+		if(v[i].status == 'A'){
+			printf("\nAluno [%d] | Nome: %s | Idade: %d | Nota: %.2f", i+1, v[i].nome, v[i].idade, v[i].nota);			
+		}
+		else{
+			countInativo += 1;
+		}
+	}
+	if(n <= 0 || n == countInativo){
+		printf("\nErro: Nenhum aluno ativo foi achado");
+	}
+	printf("\n");
 }
 /* ============================================================
 EXERC CIO 6 C lculo da m dia? ? ? ?
 ============================================================ */
 float media_alunos(Aluno *v, int n) {
-/* TODO: calcular m dia das notas dos alunos ativos */
-return 0.0f;
+	float mediaAlunos = 0;
+	if(n <= 0){
+		printf("\nErro: Nunhum aluno ativo foi achado");
+	}
+	for(int i = 0; i < n; i++){
+		if(v[i].status == 'A'){
+			mediaAlunos += v[i].nota;	
+		}
+	}
+	return mediaAlunos/n;
 }
 /* ============================================================
 EXERC CIO 7 Busca por nome? ?
 ============================================================ */
 Aluno* busca_aluno(Aluno *v, int n, char nome[]) {
-/* TODO: retornar ponteiro para aluno encontrado ou NULL */
-return NULL;
+	for(int i = 0; i < n; i++){
+		if(strcmp(v[i].nome, nome) == 0){
+			return &v[i];
+		}
+	}
+	return NULL;
 }
 /* ============================================================
 EXERC CIO 8 Remo o l gica? ? ?? ?
 ============================================================ */
 void remove_aluno(Aluno *v, int n, char nome[]) {
-/* TODO: marcar o aluno como inativo */
+	for(int i = 0; i < n; i++){
+		if(strcmp(v[i].nome, nome) == 0){
+			v[i].status = 'I';
+			printf("\nAluno encotrado e marcado como inativo\n");
+			return;
+		}
+	}
+	printf("\nErro: aluno nao escontrado\n");
 }
 /* ============================================================
 PROGRAMA PRINCIPAL
@@ -115,10 +147,10 @@ imprime_alunos(turma, qtd);
 break;
 case 3:
 if (qtd > 0)
-printf("Media: %.2f\n", media_alunos(turma, qtd));
+printf("\nMedia: %.2f\n", media_alunos(turma, qtd));
 break;
 case 4:
-printf("Nome: ");
+printf("\nNome: ");
 fgets(nome, MAX, stdin);
 nome[strcspn(nome, "\n")] = '\0';
 a = busca_aluno(turma, qtd, nome);
@@ -130,7 +162,7 @@ printf("Aluno nao encontrado.\n");
 }
 break;
 case 5:
-printf("Nome do aluno a remover: ");
+printf("\nNome do aluno a remover: ");
 fgets(nome, MAX, stdin);
 nome[strcspn(nome, "\n")] = '\0';
 remove_aluno(turma, qtd, nome);
